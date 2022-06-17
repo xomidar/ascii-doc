@@ -16,7 +16,7 @@ header:
     right:
       content: '_{organization}_'
     center:
-      content: image:sample-logo.jpg[pdfwidth=0.25in]
+      content: image:bs23.png[pdfwidth=0.25in]
   verso:
     columns: $header_recto_columns
     left:

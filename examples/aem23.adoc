@@ -1,0 +1,75 @@
+= AEM: Remote Development Environment
+Md. Rezaul Hasan
+v1.0, 2022-01-01
+:organization: Brain Station 23 Ltd.
+:doctype: book
+// Settings:
+:experimental:
+:reproducible:
+:icons: font
+:listing-caption: Listing
+:sectnums:
+:toc:
+:toclevels: 3
+:xrefstyle: short
+ifdef::backend-pdf[]
+:pdf-theme: chronicles
+:pdf-themesdir: {docdir}
+:title-logo-image: image:bs-logo.svg[pdfwidth=5.35in,align=center]
+:source-highlighter: rouge
+//:rouge-style: github
+endif::[]
+
+
+== Central Project Properties Configuration
+
+Please put your personalized project `settings.xml` file at your maven root (.m2) folder.
+Your `settings.xml` file will look like as bellow:
+
+.Project Properties
+[source,xml]
+----
+<settings>
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <aem.host>localhost</aem.host>
+                <aem.port>4502</aem.port>
+                <aem.publish.host>localhost</aem.publish.host>
+                <aem.publish.port>4503</aem.publish.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <aem.host>awcm-d.aem23.net</aem.host>
+                <aem.port>80</aem.port>
+                <aem.publish.host>www-d.aem23.net</aem.publish.host>
+                <aem.publish.port>80</aem.publish.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>qa</id>
+            <properties>
+                <aem.host>awcm-q.aem23.net</aem.host>
+                <aem.port>80</aem.port>
+                <aem.publish.host>www-q.aem23.net</aem.publish.host>
+                <aem.publish.port>80</aem.publish.port>
+            </properties>
+        </profile>
+        <profile>
+            <id>reza</id>
+            <properties>
+                <aem.host>a-reza.aem23.net</aem.host>
+                <aem.port>80</aem.port>
+                <aem.publish.host>p-reza.aem23.net</aem.publish.host>
+                <aem.publish.port>80</aem.publish.port>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>reza</activeProfile>
+    </activeProfiles>
+</settings>
+----
